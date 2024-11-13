@@ -2,8 +2,8 @@
 
 #navbar{
     padding: 5px 0px;
-    background-color: #ffffff;
     display: flex;
+    background-color: white;
     align-items: center;
 }
 
