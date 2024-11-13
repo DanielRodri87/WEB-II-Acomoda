@@ -37,7 +37,7 @@ body {
     flex: 1;
     display: flex;
     width: 100px; /* Ajuste conforme necessário */
-    height: 510px; /* Ajuste conforme necessário */
+    height: 660px; /* Ajuste conforme necessário */
     clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
     background-image: url('../images/Imagem\ Fundo.png');
     align-items: center;
@@ -66,7 +66,7 @@ body {
 
 .info_esq h2{
     font-family: "Urbanist", sans-serif;
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: 950;
     color: #333;
     margin-bottom: 20px;
@@ -83,7 +83,7 @@ body {
     padding: 30px;
     padding-top: 50px;
     margin-left: 85px;
-    width: 65%;
+    width: 50%;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
