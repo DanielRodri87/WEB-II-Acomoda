@@ -1,22 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding-top: 20px;
+}
+
+#navbar {
+    margin: 0;
+    padding: 0;
+}
+
+
+.card {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
 }
 
 .card_esquerda {
     display: flex;
+    flex-direction: column;
     background-color: #62937D;
-    color: #FFFF;
+    color: #FFFFFF;
     width: 412px;
-    height: 790px;
+    height: 650px;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.perfil {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.perfil .foto img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.camera {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #B9B9B9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.camera img {
+    width: 20px;
+    height: 20px;
+}
+
+.textos h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.textos p {
+    font-size: 16px;
+    font-weight: 300;
 }
 
 .card_direita {
     background-image: url('../images/background_cadastro.png');
+    background-size: cover;
+    background-position: center;
     width: 612px;
-    height: 790px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
 }
+
+.campo_info {
+    width: 100%;
+    background-color: #F3F3F3;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.campo_info input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #333;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #F8A139;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #e08f2c;
+}
+
+

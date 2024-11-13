@@ -5,43 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/register.css">
     <link rel="stylesheet" href="../assets/css/components/navbar.css">
-
     <title>Tela de Cadastro</title>
 </head>
 <body>
-
     <div id="navbar"></div>
 
-    <div class="card">
-
-        <div class="card_esquerda">
-            <div class="perfil">
-                <div class="foto">
-                    <img src="../assets/images/perfil.png" alt="">
+    <!-- Adicione um container para isolar o layout -->
+    <div class="container">
+        <div class="card">
+            <div class="card_esquerda">
+                <div class="perfil">
+                    <div class="foto">
+                        <img src="../assets/images/perfil.png" alt="Perfil">
+                    </div>
+                    <div class="camera">
+                        <img src="../assets/images/camera_logo.png" alt="Câmera">
+                    </div>
                 </div>
-                <div class="camera"></div>
+                <div class="textos">
+                    <h2>Seja Bem-Vindo!</h2>
+                    <p>Preencha os campos com os seus dados</p>
+                </div>
             </div>
 
-            <div class="textos">
-                <h2>Seja Bem-Vindo!</h2>
-                <p>Preencha os campos com os seus dados</p>
+            <div class="card_direita">
+                <div class="campo_info">
+                    <img src="../assets/images/user.png" alt="User Icon">
+                    <input type="text" placeholder="Digite seu user aqui">
+                </div>
+                <div class="campo_info">
+                    <img src="../assets/images/nome.png" alt="Name Icon">
+                    <input type="text" placeholder="Digite seu nome aqui">
+                </div>
+                <div class="campo_info">
+                    <img src="../assets/images/email.png" alt="Email Icon">
+                    <input type="email" placeholder="Digite seu e-mail aqui">
+                </div>
+                <div class="campo_info">
+                    <img src="../assets/images/senha.png" alt="Password Icon">
+                    <input type="password" placeholder="Digite sua senha aqui (mínimo de 8 dígitos)">
+                </div>
+                <div class="campo_info">
+                    <img src="../assets/images/senha.png" alt="Confirm Password Icon">
+                    <input type="password" placeholder="Digite sua senha novamente">
+                </div>
+
+                <button>Cadastre-se</button>
             </div>
         </div>
-
-        <div class="card_direita">
-            <div class="campo_info" id="user"></div>
-            <div class="campo_info" id="nome" ></div>
-            <div class="campo_info" id="email"></div>
-            <div class="campo_info" id="senha"></div>
-            <div class="campo_info" id="senha_confirma"></div>
-
-            <button>Cadastre-se</button>
-        </div>
-
     </div>
 
-
     <script src="../assets/js/main.js"></script>
-
 </body>
 </html>
