@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+#navbar{
+    padding: 5px 0px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+#navbar .logo img {
+    height: 30px;
+    padding: 0 20px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Urbanist', sans-serif;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #E19355;
+}
