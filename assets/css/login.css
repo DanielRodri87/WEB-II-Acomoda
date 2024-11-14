@@ -30,6 +30,7 @@ body {
 /* Exemplo de cores para visualização (remova ou modifique conforme necessário) */
 .info_esq {
     background-color: white;
+    padding-left: 40px;
 }
 
 /* Seção Direita */
@@ -146,19 +147,27 @@ button {
     border-radius: 15px;
     cursor: pointer;
     margin-top: 10px;
+    transition: color 0.5s, background-color 0.5s, border 0.5s;
 }
 
 button:hover {
-    background-color: #d27e3d;
+    background-color: #ffffff;
+    color: #e89c51;
+    border: 2px solid #e89c51;
 }
 
 .card_login a {
     color: #0E4548;
     font-family: "Urbanist", sans-serif;
-    font-size: 0.9em;
+    font-size: 0.7em;
     font-weight: bold;
     text-decoration: none;
     margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.card_login a:hover {
+    color: #d27e3d;
 }
 
 .card_login p {
@@ -177,5 +186,5 @@ button:hover {
 }
 
 .card_login p a:hover {
-    color: #6fa1e8;
+    color: #d27e3d;
 }
