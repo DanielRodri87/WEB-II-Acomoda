@@ -22,7 +22,14 @@
     height: 600px; 
     border-radius: 10px;
     display: flex;
+    overflow: hidden; 
+}
+.container2
+{
+    width: 683.7px;
+    height: 600px; 
     align-items: center;
+    display: flex;
     overflow: hidden; 
 }
 
@@ -55,9 +62,67 @@
     padding: 20px;
 }
 
-.card_esquerda{
+.card_esquerda {
     flex: 1;
     margin-left: 5%;
+    margin-top: 3%;
+    gap: 20px;
+}
+
+.card_esquerda span{
+    display: block;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+.card_direita span {
+    display: block;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card_esquerda h1 {
+    font-size: 64px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input {
+    margin-bottom: 10px; 
+    font-size: 20px;
+}
+
+.input input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 50%;
+}
+
+button {
+    padding: 12px 20px; 
+    background-color: #0F4448;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px; 
+    width: 25%;
+    margin-left: 11%;
+
+}
+
+button:hover {
+    background-color: #084d4b; /* Cor de fundo ao passar o mouse */
 }
 
 .card_direita {
@@ -78,7 +143,7 @@
 }
 
 .card_direita h3 {
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
