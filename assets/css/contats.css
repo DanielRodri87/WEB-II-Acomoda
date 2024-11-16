@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+
+}
+.caixa_geral {
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #fff; 
+}
+
+.container {
+    margin-top: 40px;
+    position: relative; 
+    width: 1367.39px;
+    height: 600px; 
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden; 
+}
+.container2
+{
+    width: 683.7px;
+    height: 600px; 
+    align-items: center;
+    display: flex;
+    overflow: hidden; 
+}
+
+.background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; 
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #59907B;
+    opacity: 0.9;
+    z-index: 1; 
+}
+
+.card_direita,
+.card_esquerda {
+    position: relative; 
+    z-index: 3; 
+    color: #fff; 
+    padding: 20px;
+}
+
+.card_esquerda {
+    flex: 1;
+    margin-left: 5%;
+    margin-top: 3%;
+    gap: 20px;
+}
+
+.card_esquerda span{
+    display: block;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+.card_direita span {
+    display: block;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card_esquerda h1 {
+    font-size: 64px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input {
+    margin-bottom: 10px; 
+    font-size: 20px;
+}
+
+.input input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 50%;
+}
+
+button {
+    padding: 12px 20px; 
+    background-color: #0F4448;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px; 
+    width: 25%;
+    margin-left: 11%;
+
+}
+
+button:hover {
+    background-color: #084d4b; /* Cor de fundo ao passar o mouse */
+}
+
+.card_direita {
+    flex: 1;
+    margin-left: auto;
+    width: 400px; /* Ajuste para centralizar */
+    height: auto;
+    background-color: #0F4448;
+    opacity: 90%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card_direita h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.linha {
+    width: 2px;
+    height: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card_direita h3{
+    margin-bottom: 6%;
+}
+.linha{
+    margin-bottom: 80%;
+}
+
+.info-item img {
+    padding-left: 7%;
+    width: 44px;
+    height: 46px;
+    object-fit: contain;
+}
+
+
+
+.info-item span {
+    font-size: 16px;
+    font-weight: 400;
+}
