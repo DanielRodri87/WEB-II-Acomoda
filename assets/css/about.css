@@ -8,6 +8,11 @@
     font-family: 'Urbanist', sans-serif;
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 .caixa_geral {
     display: flex;
     justify-content: center;
@@ -21,12 +26,12 @@
     gap: 30px;
     background: #ffffff;
     border-radius: 10px;
-    padding: 20px;
+    padding: 39px;
     width: 80%;
 }
 
 .card_esquerda {
-    flex: 1;
+    flex: 0.4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +45,11 @@
     color: #000;
 }
 
+#seta{
+    width: 43px;
+    height: 43px;
+}
+
 .card_esquerda p {
     font-size: 16px;
     line-height: 1.6;
@@ -47,14 +57,14 @@
 }
 
 .card_direito {
-    flex: 1;
+    flex: 0.6;
     display: flex;
-    flex-direction: row; /* Exibe os elementos em linha */
+    flex-direction: row; 
     align-items: center;
-    justify-content: space-between; /* Espaça os elementos */
+    justify-content: space-between; 
     padding: 20px;
     position: relative; 
-    gap: 20px; /* Espaçamento entre elementos */
+    gap: 20px; 
 }
 
 .perfil {
@@ -65,8 +75,8 @@
 }
 
 .info {
-    text-align: left; /* Alinha o texto à esquerda */
-    max-width: 300px; /* Define uma largura máxima */
+    text-align: left; 
+    max-width: 300px; 
 }
 
 .info span {
@@ -77,6 +87,12 @@
 .info b {
     font-size: 18px;
     color: #333;
+}
+
+.container_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info button {
@@ -96,5 +112,44 @@
 
 .card_direito img {
     height: auto;
-    align-self: center; /* Centraliza verticalmente */
+    align-self: center; 
 }
+
+
+.footer {
+    margin-top: 7%;
+    height: 220px;
+    padding-left: 20px;
+    background-image: url('../images/background_about.png');
+    opacity: 0.9;
+    color: #ffffff;
+    display: flex; 
+    align-items: center; 
+    transition: all 0.5s ease; 
+}
+
+.footer:hover {
+    margin-top: 0%;
+    height: 220px;
+    background-image: url('../images/background_about.png');
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+#titulo_footer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer img {
+    max-width: 100px; 
+    height: auto; 
+}
+
+.infos_footer {
+    max-width: 30%; 
+    margin-left: 20px; 
+}
+
