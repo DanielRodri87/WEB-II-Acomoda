@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Urbanist', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #fff;
+    color: #333;
 }
 
 .container {
-    width: 80%;
+    width: 85%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -28,71 +31,105 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     color: #333;
+    font-size: 16px;
 }
 
 .search-bar {
     margin: 20px 0;
-    text-align: right;
+    text-align: center;
 }
 
 .search-bar input[type="text"] {
-    padding: 5px;
-    width: 200px;
+    padding: 10px;
+    width: 50%;
     border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-h2 {
-    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .accommodation-section {
     margin-bottom: 40px;
 }
 
+.accommodation-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.accommodation-section p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
 .accommodations {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
 .accommodation-card {
-    width: 30%;
+    background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out;
+}
+
+.accommodation-card:hover {
+    transform: translateY(-5px);
 }
 
 .accommodation-card img {
     width: 100%;
-    height: auto;
+    height: 180px;
+    object-fit: cover;
 }
 
 .accommodation-info {
-    padding: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .accommodation-title {
     font-weight: bold;
     font-size: 16px;
-    margin-top: 10px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .accommodation-details {
     color: #555;
     font-size: 14px;
-    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 .price {
     font-weight: bold;
     color: #3b7e48;
+    font-size: 16px;
     margin-top: 10px;
 }
 
+.price span {
+    font-size: 12px;
+    color: #777;
+}
+
 .rating {
-    display: inline-flex;
-    align-items: center;
     color: #FFD700;
     font-size: 14px;
-    margin-left: 5px;
+    font-weight: bold;
 }
