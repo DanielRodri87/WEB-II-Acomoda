@@ -8,14 +8,6 @@
     
 }
 
-/* body {
-    font-family: 'Urbanist', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-} */
-
 .container {
     width: 85%;
     max-width: 1200px;
@@ -35,19 +27,42 @@ header {
 }
 
 .search-bar {
-    margin: 20px 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 50px; 
+    padding: 15px 25px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto;
+    margin-bottom: 50px;
+    padding-left: 3%;
+    width: 60%; 
 }
 
-.search-bar input[type="text"] {
-    padding: 10px;
-    width: 50%;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    font-size: 16px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+.search-bar > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
 }
 
+.botao {
+    background-color: #E19355;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.botao img {
+    width: 24px; 
+    height: 24px;
+}
 .accommodation-section {
     margin-bottom: 40px;
 }
@@ -81,9 +96,114 @@ header {
     transition: transform 0.2s ease-in-out;
 }
 
-.accommodation-card:hover {
-    transform: translateY(-5px);
+.referencia .distancia .tipo .avaliacao {
+    position: relative;
+    display: inline-block;
 }
+
+.referencia {
+    align-items: center;  
+    border-radius: 50%;
+    width: 120px;
+    height: 80px;
+}
+
+.referencia:hover {
+    background-color: #5A917C;
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 120px;
+    height: 80px;
+    transition: all 0.5s ease; 
+}
+
+.distancia{
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 120px;
+    height: 80px;
+}
+
+.distancia:hover {
+    background-color: #5A917C;
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 120px;
+    height: 80px;
+    transition: all 0.5s ease; 
+}
+
+.tipo {
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 250px;
+    height: 80px;
+}
+
+.tipo:hover {
+    background-color: #5A917C;
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 250px;
+    height: 80px;
+    transition: all 0.5s ease; 
+}
+
+.avaliacao {
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 130px;
+    height: 80px;
+}
+
+.avaliacao:hover {
+    background-color: #5A917C;
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 50%;
+    width: 130px;
+    height: 80px;
+    transition: inherit 0.5s ease; 
+}
+
+.image-info {
+    position: relative;
+    display: inline-block;
+    background-color: #d9d9d9;
+}
+
+.image-info img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease; 
+}
+
+.image-info:hover img {
+    opacity: 0.26; 
+}
+
+
+.image-info::after {
+    content: url("../images/lupa-preta.png"); /* Caminho da imagem da lupa */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza a lupa */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.8s ease; /* Suaviza a aparição da lupa */
+}
+
+.image-info:hover::after {
+    opacity: 1; /* Torna a lupa visível ao passar o mouse */
+}
+
 
 .accommodation-card img {
     width: 100%;
