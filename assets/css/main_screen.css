@@ -254,39 +254,39 @@ header {
     font-weight: bold;
 }
 
-.perfil {
-    position: absolute; /* Para poder controlar a posição */
-    top: 10px; /* Posiciona no topo */
-    right: 10px; /* Alinha à direita */
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    z-index: 2; /* Coloca acima da navbar */
-}
+    .perfil {
+        position: absolute; /* Para poder controlar a posição */
+        top: 8px; /* Posiciona no topo */
+        right: 17px; /* Alinha à direita */
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        z-index: 2; /* Coloca acima da navbar */
+    }
 
-.perfil-foto img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #fbb034;
-    object-fit: cover;
-}
+    .perfil-foto img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #fbb034;
+        object-fit: cover;
+    }
 
-.perfil-infos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Ajusta o alinhamento interno para o lado esquerdo */
-}
+    .perfil-infos {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Ajusta o alinhamento interno para o lado esquerdo */
+    }
 
-.perfil-infos h1 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
+    .perfil-infos h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
 
-.perfil-infos p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-}
+    .perfil-infos p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+    }

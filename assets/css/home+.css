@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.accommodation-section-new {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.accommodations-new {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.accommodation-card-new {
+    display: flex;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    margin-left: 0;
+}
+
+.image-info-new {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Remover o fundo */
+    width: 600px;
+    height: 300px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+}
+
+.image-info-new img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 22px;
+    border-radius:  5%; /* Arredonda a imagem completamente */
+}
+
+.accommodation-info-new {
+    flex: 1;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 15px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+
+.accommodation-title-new {
+    margin-bottom: px;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accommodation-details-new {
+    font-size: 18px;
+    color: #666;
+}
+
+.price-new {
+    margin-bottom: 22px;
+    font-size: 22px;
+    font-weight: 800;
+    color: black;
+}
+
+.price-new button {
+    margin-left: 20%;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    background-color: #62937d85;
+    font-weight: bolder;
+    border: none;
+}
+
+.price-new .heart-icon {
+    width: 30px; 
+    height: px;
+    margin-left: 135px;  /* Aqui você precisa definir o valor de margin-left */
+    
+}
+
+ 
+.rating-new {
+    margin-top: 5%;
+    color: #0c0c0c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.estrela {
+    margin-left: 31px;
+    font-size: 15px;
+}
+
+.descricao {
+    color: #0c0c0c;
+}
+.accommodation-section-custom {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.accommodation-section-custom h2 {
+    
+    margin-bottom: px; /* Espaço entre o título e as imagens */
+}
+
+.image-carousel-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    gap: 20px; /* Espaço entre as setas e as imagens */
+}
+
+.circle-left-custom, .circle-right-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;  /* Reduzindo o tamanho das setas */
+    height: 35px; /* Reduzindo o tamanho das setas */
+    background-color: #62937d8a;
+    color: rgb(0, 0, 0);
+    border-radius: 50%; /* Garantindo que as setas sejam circulares */
+    font-size: 14px; /* Ajuste o tamanho do ícone */
+    cursor: pointer;
+    user-select: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.image-container-custom {
+    
+    display: flex;
+    gap: 20px; /* Espaço entre as imagens */
+}
+
+.carousel-image-custom {
+    margin-top: 30px;
+    width: 340px; /* Aumenta o tamanho das imagens */
+    height: 250px; /* Aumenta o tamanho das imagens */
+    object-fit: cover;
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 20px;
+}
+
+.conteirner3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #D9D9D9;
+
+    border-radius: 8px;
+    width: 1180px;
+    height: 80px; /* Aumentei a altura para acomodar melhor os elementos */
+  }
+  
+  .square-left {
+    flex-basis: 5%; /* Ocupa 20% da largura do contêiner */
+    max-width: 20%;
+    margin-right: 10px;
+    height: 70%; /* Ajusta para caber dentro do contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Remove o fundo do quadrado */
+  }
+  
+  .square-left img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .square-right {
+    flex-basis: 99%; /* Ocupa 75% da largura do contêiner */
+    height: 80%; /* Ajusta para caber dentro do contêiner */
+    background-color: #F9F9F9;
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* Espaçamento entre a imagem e o quadrado */
+    text-align: center;
+    box-shadow: none;;
+    padding: 10px;
+  }
+
+  .square-text {
+    margin-top: 4px; /* Remove margens padrão */
+   /* Ajusta o espaço entre o texto e o topo */
+    align-self: flex-start;
+    margin-right: 900px; /* Garante que o texto se alinhe ao início */
+}
+
+.comment-box {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.user-icon {
+    width: 65px;
+    height: 65px;
+    margin-right: 10px;
+    border-radius: 50%;
+    margin-top: 8px;
+}
+
+.comment-content {
+    max-width: 500px;
+}
+
+.comment-content p {
+    margin: 5px;
+    line-height: 1.5;
+}
+
+.comment-content p:first-child {
+    font-weight: bold;
+}
+
+.response-box {
+    display: flex;
+    align-items: center;
+    margin-left: 100px; /* Alinha com o comentário */
+    position: relative;
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ccc; /* Cor da seta */
+    position: absolute;
+    left: -20px; /* Ajuste para posicionar corretamente */
+    top: 10px;
+}
+
+.response-content {
+    background-color: #f9f9f9;
+    margin-left: 7px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.perfil {
+    position: absolute; /* Para poder controlar a posição */
+    top: 10px; /* Posiciona no topo */
+    right: 10px; /* Alinha à direita */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2; /* Coloca acima da navbar */
+}
+
+.perfil-foto img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fbb034;
+    object-fit: cover;
+}
+
+.perfil-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ajusta o alinhamento interno para o lado esquerdo */
+}
+
+.perfil-infos h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.perfil-infos p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
