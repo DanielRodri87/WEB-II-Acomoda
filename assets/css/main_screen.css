@@ -103,16 +103,16 @@ header {
 
 .referencia {
     align-items: center;  
-    border-radius: 50%;
+    border-radius: 40%;
     width: 140px;
     height: 80px;
 }
 
 .referencia:hover {
-    background-color: #5A917C;
+    background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 50%;
+    border-radius: 40%;
     width: 140px;
     height: 80px;
     transition: all 0.5s ease; 
@@ -121,16 +121,16 @@ header {
 .distancia{
     align-items: center;  
     opacity: 0.7;
-    border-radius: 50%;
+    border-radius: 40%;
     width: 140px;
     height: 80px;
 }
 
 .distancia:hover {
-    background-color: #5A917C;
+    background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 50%;
+    border-radius: 40%;
     width: 140px;
     height: 80px;
     transition: all 0.5s ease; 
@@ -139,17 +139,17 @@ header {
 .tipo {
     align-items: center;  
     opacity: 0.7;
-    border-radius: 50%;
-    width: 250px;
+    border-radius: 40%;
+    width: 230px;
     height: 80px;
 }
 
 .tipo:hover {
-    background-color: #5A917C;
+    background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 50%;
-    width: 250px;
+    border-radius: 40%;
+    width: 230px;
     height: 80px;
     transition: all 0.5s ease; 
 }
@@ -157,16 +157,16 @@ header {
 .avaliacao {
     align-items: center;  
     opacity: 0.7;
-    border-radius: 50%;
+    border-radius: 40%;
     width: 140px;
     height: 80px;
 }
 
 .avaliacao:hover {
-    background-color: #5A917C;
+    background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 50%;
+    border-radius: 40%;
     width: 140px;
     height: 80px;
     transition: inherit 0.5s ease; 
@@ -252,4 +252,41 @@ header {
     color: #FFD700;
     font-size: 14px;
     font-weight: bold;
+}
+
+.perfil {
+    position: absolute; /* Para poder controlar a posição */
+    top: 10px; /* Posiciona no topo */
+    right: 10px; /* Alinha à direita */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2; /* Coloca acima da navbar */
+}
+
+.perfil-foto img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fbb034;
+    object-fit: cover;
+}
+
+.perfil-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ajusta o alinhamento interno para o lado esquerdo */
+}
+
+.perfil-infos h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.perfil-infos p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
 }
