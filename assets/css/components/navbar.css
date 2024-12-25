@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
-#navbar{
+#navbar {
     padding: 10px 0px;
     display: flex;
     background-color: white;
     align-items: center;
+    position: relative; /* Para definir o contexto de empilhamento */
+    z-index: 1; /* Define o nível de empilhamento */
 }
+
 
 #navbar .logo img {
     height: 34px;
