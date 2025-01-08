@@ -101,9 +101,9 @@ header {
     display: inline-block;
 }
 
-.referencia {
+/* .referencia {
     align-items: center;  
-    border-radius: 40%;
+    border-radius: 40px / 50%;
     width: 140px;
     height: 80px;
 }
@@ -112,16 +112,107 @@ header {
     background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 40%;
+    border-radius: 40px / 50%;
     width: 140px;
     height: 80px;
-    transition: all 0.5s ease; 
+    transition: all 0.7s ease; 
+} */
+
+.referencia {
+    align-items: center;  
+    border-radius: 40px / 50%;
+    width: 140px;
+    height: 80px;
 }
+
+.referencia a {
+    display: flex; /* Garante que o link ocupe toda a área do botão */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado */
+    color: black;
+    width: 100%; /* Faz o link preencher a referência */
+    height: 100%; /* Faz o link preencher a referência */
+}
+
+.referencia:hover {
+    background-color: rgba(90, 145, 124, 0.7);
+    align-items: center;  
+    opacity: 0.7;
+    border-radius: 40px / 50%;
+    width: 140px;
+    height: 80px;
+    transition: all 0.7s ease; 
+}
+
+/* Estilo da sobreposição */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Escurece o fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo do conteúdo da sobreposição */
+.overlay-content {
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    height: 80%; /* Aumentado para acomodar o mapa */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden; /* Garante que o mapa não saia dos limites */
+}
+
+#map {
+    flex: 1; /* O mapa ocupa todo o espaço disponível */
+    width: 100%;
+    height: 100%;
+}
+
+/* Botão de fechar */
+.close-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b4d4c7;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: rgba(90, 145, 124, 0.7);
+}
+
 
 .distancia{
     align-items: center;  
     opacity: 0.7;
-    border-radius: 40%;
+    border-radius: 35% / 55%;
     width: 140px;
     height: 80px;
 }
@@ -130,16 +221,16 @@ header {
     background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 40%;
+    border-radius: 35% / 55%;
     width: 140px;
     height: 80px;
-    transition: all 0.5s ease; 
+    transition: all 0.7s ease; 
 }
 
 .tipo {
     align-items: center;  
     opacity: 0.7;
-    border-radius: 40%;
+    border-radius: 22% / 55%;
     width: 230px;
     height: 80px;
 }
@@ -148,16 +239,16 @@ header {
     background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 40%;
+    border-radius: 22% / 55%;
     width: 230px;
     height: 80px;
-    transition: all 0.5s ease; 
+    transition: all 0.7s ease; 
 }
 
 .avaliacao {
     align-items: center;  
     opacity: 0.7;
-    border-radius: 40%;
+    border-radius: 35% / 55%;
     width: 140px;
     height: 80px;
 }
@@ -166,10 +257,10 @@ header {
     background-color: rgba(90, 145, 124, 0.7);
     align-items: center;  
     opacity: 0.7;
-    border-radius: 40%;
+    border-radius: 35% / 55%;
     width: 140px;
     height: 80px;
-    transition: inherit 0.5s ease; 
+    transition: all 0.7s ease; 
 }
 
 .image-info {
@@ -249,7 +340,7 @@ header {
 }
 
 .rating {
-    color: #FFD700;
+    color: #000000;
     font-size: 14px;
     font-weight: bold;
 }
