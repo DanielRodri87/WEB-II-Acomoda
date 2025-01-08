@@ -29,14 +29,51 @@
     <!-- Container de sobreposição -->
     <div id="overlay" class="overlay">
         <div class="overlay-content">
-            <div id="map"></div> <!-- Elemento onde o mapa será renderizado -->
-            <a href="#" class="close-btn">Fechar</a>
+            <!-- Imagem dentro da sobreposição -->
+            <img src="../assets/images/image.png" alt="Imagem de referência" />
+
+            <!-- Elemento onde o mapa será renderizado (se necessário, pode ser removido caso não precise) -->
+            <div id="map"></div>
+
+            <!-- Botão de fechar -->
+            <a href="#" class="close-btn">Escolher no mapa</a>
         </div>
     </div>
     <div class="distancia">
-        <span><b>Distância</b></span>
-        <span>Do raio</span>
+        <a href="#overlay-distancia">
+            <span><b>Distância</b></span>
+            <span>Do raio</span>
+        </a>
     </div>
+    
+    <!-- Container de sobreposição para a distância -->
+    <div id="overlay-distancia" class="overlay">
+        <div class="overlay-content">
+            <h2>Ajuste a distância</h2>
+            <div class="slider-container">
+                <span>0 km</span>
+                <input type="range" id="distance-slider" min="0" max="100" value="39" />
+                <span>100 km</span>
+            </div>
+            <p><b><span id="slider-value">39</span> km</b></p>
+            <a href="#" class="close-btn">Confirmar</a>
+        </div>
+    </div>
+
+    <!-- Script para controle do slider -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.getElementById("distance-slider");
+            const sliderValue = document.getElementById("slider-value");
+
+            // Atualiza o valor dinâmico e o fundo do slider
+            slider.addEventListener("input", function () {
+                sliderValue.textContent = slider.value;
+                const percent = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
+                slider.style.background = `linear-gradient(to right, #E19355 ${percent}%, #dfdfdf ${percent}%)`;
+            });
+        });
+    </script>
     <div class="tipo">
         <span><b>Tipo</b></span>
         <span>Categoria da acomodação</span>

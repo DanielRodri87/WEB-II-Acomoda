@@ -8,6 +8,12 @@
     
 }
 
+body {
+    margin: 0;
+    padding: 20px; /* Margem de 20px ao redor de toda a tela */
+    box-sizing: border-box; /* Garante que o padding/margin seja aplicado corretamente */
+}
+
 .container {
     width: 85%;
     max-width: 1200px;
@@ -101,23 +107,6 @@ header {
     display: inline-block;
 }
 
-/* .referencia {
-    align-items: center;  
-    border-radius: 40px / 50%;
-    width: 140px;
-    height: 80px;
-}
-
-.referencia:hover {
-    background-color: rgba(90, 145, 124, 0.7);
-    align-items: center;  
-    opacity: 0.7;
-    border-radius: 40px / 50%;
-    width: 140px;
-    height: 80px;
-    transition: all 0.7s ease; 
-} */
-
 .referencia {
     align-items: center;  
     border-radius: 40px / 50%;
@@ -176,60 +165,126 @@ header {
     background-color: white;
     border-radius: 10px;
     width: 90%;
-    max-width: 800px;
-    height: 80%; /* Aumentado para acomodar o mapa */
+    max-width: 500px; /* Limita a largura máxima */
+    padding: 20px; /* Margem interna para o conteúdo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden; /* Garante que o mapa não saia dos limites */
+    gap: 20px; /* Espaçamento entre elementos */
+    border-radius: 40px;
 }
 
-#map {
-    flex: 1; /* O mapa ocupa todo o espaço disponível */
+/* Estilo da imagem dentro da sobreposição */
+.overlay-content img {
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    height: auto;
+    border-radius: 35px;
+    margin-bottom: -20px; /* Espaçamento entre a imagem e o botão */
+}
+
+/* Botão dentro da sobreposição */
+.overlay-content .close-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E19355;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 35px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-content .close-btn:hover {
+    background-color: #b4693d;
+}
+
+.distancia {
+    align-items: center;
+    border-radius: 35% / 55%;
+    width: 140px;
+    height: 80px;
+}
+
+.distancia a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado */
+    color: black;
     width: 100%;
     height: 100%;
 }
 
-/* Botão de fechar */
-.close-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #b4d4c7;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.close-btn:hover {
-    background-color: rgba(90, 145, 124, 0.7);
-}
-
-
-.distancia{
-    align-items: center;  
-    opacity: 0.7;
-    border-radius: 35% / 55%;
-    width: 140px;
-    height: 80px;
-}
-
 .distancia:hover {
     background-color: rgba(90, 145, 124, 0.7);
-    align-items: center;  
+    align-items: center;
     opacity: 0.7;
     border-radius: 35% / 55%;
     width: 140px;
     height: 80px;
-    transition: all 0.7s ease; 
+    transition: all 0.7s ease;
+}
+
+/* Slider Container */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Estilo do Slider */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    height: 6px;
+    background: linear-gradient(to right, #E19355 39%, #dfdfdf 39%);
+    border-radius: 5px;
+    outline: none;
+    margin: 0 10px;
+    position: relative;
+}
+
+/* Estilo do bullet (thumb) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #E19355;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #E19355;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo geral do overlay */
+.overlay-content h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+#slider-value {
+    font-size: 16px;
+    color: #333;
 }
 
 .tipo {
     align-items: center;  
-    opacity: 0.7;
     border-radius: 22% / 55%;
     width: 230px;
     height: 80px;
@@ -247,7 +302,6 @@ header {
 
 .avaliacao {
     align-items: center;  
-    opacity: 0.7;
     border-radius: 35% / 55%;
     width: 140px;
     height: 80px;
@@ -345,39 +399,39 @@ header {
     font-weight: bold;
 }
 
-    .perfil {
-        position: absolute; /* Para poder controlar a posição */
-        top: 8px; /* Posiciona no topo */
-        right: 17px; /* Alinha à direita */
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        z-index: 2; /* Coloca acima da navbar */
-    }
+.perfil {
+    position: absolute; /* Para poder controlar a posição */
+    top: 40px; /* Posiciona no topo */
+    right: 40px; /* Alinha à direita */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2; /* Coloca acima da navbar */
+}
 
-    .perfil-foto img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid #fbb034;
-        object-fit: cover;
-    }
+.perfil-foto img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fbb034;
+    object-fit: cover;
+}
 
-    .perfil-infos {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Ajusta o alinhamento interno para o lado esquerdo */
-    }
+.perfil-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ajusta o alinhamento interno para o lado esquerdo */
+}
 
-    .perfil-infos h1 {
-        margin: 0;
-        font-size: 16px;
-        font-weight: bold;
-        color: #333;
-    }
+.perfil-infos h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
 
-    .perfil-infos p {
-        margin: 0;
-        font-size: 14px;
-        color: #666;
-    }
+.perfil-infos p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
