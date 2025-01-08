@@ -21,8 +21,17 @@
 
 <div class="search-bar">
     <div class="referencia">
-        <span><b>Referência</b></span>
-        <span>Do local</span>
+        <a href="#overlay">
+            <span><b>Referência</b></span>
+            <span>Do local</span>
+        </a>
+    </div>
+    <!-- Container de sobreposição -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <div id="map"></div> <!-- Elemento onde o mapa será renderizado -->
+            <a href="#" class="close-btn">Fechar</a>
+        </div>
     </div>
     <div class="distancia">
         <span><b>Distância</b></span>
@@ -30,7 +39,7 @@
     </div>
     <div class="tipo">
         <span><b>Tipo</b></span>
-        <span>Infome o tipo da acomodação</span>
+        <span>Categoria da acomodação</span>
     </div>
     <div class="avaliacao">
         <span><b>Avaliação</b></span>
