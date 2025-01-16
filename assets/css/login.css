@@ -93,6 +93,8 @@ body {
 
 .card_login h3 {
     font-size: 1.1em;
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
     margin-bottom: 20px;
     color: #333;
 }
@@ -139,6 +141,8 @@ input::placeholder {
 
 button {
     width: 50%;
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
     padding: 10px;
     font-size: 1em;
     color: white;
@@ -153,7 +157,7 @@ button {
 button:hover {
     background-color: #ffffff;
     color: #e89c51;
-    border: 2px solid #e89c51;
+    /* border: 2px solid #e89c51; */
 }
 
 .card_login a {
@@ -172,6 +176,7 @@ button:hover {
 
 .card_login p {
     font-family: "Urbanist", sans-serif;
+    font-weight: bold;
     font-size: 0.9em;
     color: #000000;
     font-weight: bold   ;

@@ -10,7 +10,7 @@
 
 body {
     margin: 0;
-    padding: 20px; /* Margem de 20px ao redor de toda a tela */
+    padding: 0px; /* Margem de 20px ao redor de toda a tela */
     box-sizing: border-box; /* Garante que o padding/margin seja aplicado corretamente */
 }
 
@@ -473,8 +473,6 @@ input[type="range"]::-moz-range-thumb {
     margin-right: 50px;
 }
 
-
-
 /* Botão de sair (canto superior direito) */
 .perfil-editar img:last-child {
     position: absolute;
@@ -595,5 +593,3 @@ input[type="range"]::-moz-range-thumb {
     left: 400px;
     padding: 20px;
 }
-
-

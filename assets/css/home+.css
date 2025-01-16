@@ -51,7 +51,7 @@
     height: 100%;
     object-fit: cover;
     margin-top: 22px;
-    border-radius:  5%; /* Arredonda a imagem completamente */
+    border-radius: 10px; /* Arredonda os quatro cantos igualmente */
 }
 
 .accommodation-info-new {
@@ -65,8 +65,6 @@
     height: 100%;
     overflow-y: auto;
 }
-
-
 
 .accommodation-title-new {
     margin-bottom: px;
@@ -106,7 +104,6 @@
     
 }
 
- 
 .rating-new {
     margin-top: 5%;
     color: #0c0c0c;
@@ -140,20 +137,8 @@
     gap: 20px; /* Espaço entre as setas e as imagens */
 }
 
-.circle-left-custom, .circle-right-custom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;  /* Reduzindo o tamanho das setas */
-    height: 35px; /* Reduzindo o tamanho das setas */
-    background-color: #62937d8a;
-    color: rgb(0, 0, 0);
-    border-radius: 50%; /* Garantindo que as setas sejam circulares */
-    font-size: 14px; /* Ajuste o tamanho do ícone */
-    cursor: pointer;
-    user-select: none;
-    margin-left: 5px;
-    margin-right: 5px;
+.buttonsides {
+    height: 40px;
 }
 
 .image-container-custom {
@@ -178,9 +163,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #D9D9D9;
+    background-color: #eeeeee;
 
-    border-radius: 8px;
+    border-radius: 30px;
     width: 1180px;
     height: 80px; /* Aumentei a altura para acomodar melhor os elementos */
   }
@@ -280,8 +265,8 @@
 
 .perfil {
     position: absolute; /* Para poder controlar a posição */
-    top: 10px; /* Posiciona no topo */
-    right: 10px; /* Alinha à direita */
+    top: 40px; /* Posiciona no topo */
+    right: 40px; /* Alinha à direita */
     display: flex;
     align-items: center;
     gap: 15px;
