@@ -435,3 +435,165 @@ input[type="range"]::-moz-range-thumb {
     font-size: 14px;
     color: #666;
 }
+
+/* #################### */
+
+/* Estilo da overlay e do conteúdo do perfil */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+/* Container geral do perfil */
+.perfil-editar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.perfil-nome {
+    padding-top: 30px;
+}
+
+/* Foto do perfil (à esquerda) */
+.perfil-editar img:first-child {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+
+
+/* Botão de sair (canto superior direito) */
+.perfil-editar img:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-10px, 10px);
+    width: 45px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.botao-sair {
+    padding-left: 200px;
+}
+
+#divide {
+    height: 3px;
+    width: 399px;
+}
+
+/* Bio (descrição) */
+.bio {
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+    margin: 10px 20px;
+}
+
+/* Divisores (linhas verdes) */
+.divisao img {
+    width: 100%;
+    height: 2px;
+    background-color: #00c853;
+    margin: 10px 0;
+}
+
+/* Seções de botões */
+.botoes-superior, .botoes-inferior {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+/* BOTOES SUPERIORES */
+.botoes-superior {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.botao-superior {
+    font-size: 16px;
+}
+
+.botao-superior p:first-child {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.botao-superior p:last-child {
+    font-weight: normal;
+    color: #666;
+}
+
+.botoes-inferior {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    width: 80%;
+    max-width: 600px;
+}
+
+.informacoes {
+    font-size: 16px;
+}
+
+.informacoes span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.informacoes p {
+    font-weight: normal;
+    color: #666;
+    margin: 0;
+}
+
+
+/* ################# */
+
+
+.perfil-imagem {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #f1f1f1;
+    object-fit: cover;
+}
+
+.perfil-nome {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 32px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.botao-sair {
+    position: absolute;
+    top: 10px;
+    left: 400px;
+    padding: 20px;
+}
+
+
