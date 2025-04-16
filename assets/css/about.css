@@ -117,39 +117,54 @@ html, body {
 
 
 .footer {
-    margin-top: 7%;
-    height: 220px;
-    padding-left: 20px;
+    width: 100%;
+    height: 325px;
     background-image: url('../images/background_about.png');
-    opacity: 0.9;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.95;
     color: #ffffff;
-    display: flex; 
-    align-items: center; 
-    transition: all 0.5s ease; 
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    margin-top: 5%;
 }
-
 .footer:hover {
     margin-top: 0%;
-    height: 220px;
+    width: 100%;
+    height: 325px;
     background-image: url('../images/background_about.png');
     opacity: 0.9;
     color: #ffffff;
 }
 
-#titulo_footer {
-    font-size: 24px;
-    font-weight: bold;
+
+.footer_coluna {
+    flex: 1 1 30%;
+    min-width: 250px;
     margin-bottom: 20px;
-    color: #ffffff;
 }
 
-.footer img {
-    max-width: 100px; 
-    height: auto; 
+.footer_coluna b {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.infos_footer {
-    max-width: 30%; 
-    margin-left: 20px; 
+.footer_coluna span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
 }
+
+.footer_coluna img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
 
