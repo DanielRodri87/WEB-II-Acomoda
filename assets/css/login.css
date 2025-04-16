@@ -37,32 +37,20 @@ body {
 .info_dir {
     flex: 1;
     display: flex;
-    width: 100px; /* Ajuste conforme necessário */
-    height: 660px; /* Ajuste conforme necessário */
-    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    
+    border: none;
+    outline: none;
+
+    background-repeat: no-repeat;
+
+    width: 150px; /* Ajuste conforme necessário */
+    height: 700px; /* Ajuste conforme necessário */
     background-image: url('../images/Imagem\ Fundo.png');
     align-items: center;
     justify-content: center;
     background-position: center;
     background-size: cover;
-    position: relative; /* Necessário para o pseudo-elemento */
-}
-
-.info_dir::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade conforme desejado */
-    clip-path: inherit; /* Mantém o mesmo formato do elemento principal */
-    z-index: 1; /* Coloca a camada na frente do fundo, mas atrás do conteúdo */
-}
-
-.info_dir > * {
-    position: relative;
-    z-index: 2; /* Garante que o conteúdo fique acima da camada escura */
+    position: relative; 
 }
 
 .info_esq h2{
@@ -74,7 +62,7 @@ body {
 }
 
 .info_esq img {
-    width: 55%;
+    width: 60%;
     margin: 10px;
     border-radius: 10px;
 }
@@ -153,7 +141,7 @@ button {
 button:hover {
     background-color: #ffffff;
     color: #e89c51;
-    border: 2px solid #e89c51;
+    border: 0.5px solid #e89c51;
 }
 
 .card_login a {
