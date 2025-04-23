@@ -1,39 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
-#navbar {
-    padding: 10px 0px;
-    display: flex;
-    background-color: white;
-    align-items: center;
-    position: relative; /* Para definir o contexto de empilhamento */
-    z-index: 1; /* Define o nível de empilhamento */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+#navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
 #navbar .logo img {
-    height: 34px;
-    padding: 0 20px;
+  height: 3.4rem;
+  padding-right: 2rem;
 }
 
 .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin-left: auto;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .navbar-links li {
-    display: inline;
+  display: inline;
 }
 
 .navbar-links a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-family: 'Urbanist', sans-serif;
-    font-size: 1.1em;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #000;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 1.7rem;
+  transition: color 0.3s ease-in-out;
 }
 
 .navbar-links a:hover {
-    color: #E19355;
+  color: #E19355;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar-links a {
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
 }

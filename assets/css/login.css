@@ -1,178 +1,209 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* Resetando margens e padding para todos os elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  /* Configuração de fontes e base */
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     background-size: cover;
     background-position: center;
-    height: 100vh;
-    overflow-x: hidden;     
-    overflow-y: hidden;
-}
-
-.Home {
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+    overflow-y: hidden; /* Garante a rolagem vertical */
+  }
+  
+  .Home {
     display: flex;
-    width: 100vw; 
-    height: 91vh; 
-}
-
-.info_esq, .info_dir {
-    flex: 1; 
-    padding: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .info_esq,
+  .info_dir {
+    flex: 1 1 50%;
+    padding: 1.5rem;
     box-sizing: border-box;
-}
-
-/* Exemplo de cores para visualização (remova ou modifique conforme necessário) */
-.info_esq {
+  }
+  
+  .info_esq {
     background-color: white;
-    padding-left: 40px;
-}
-
-/* Seção Direita */
-.info_dir {
-    flex: 1;
+    padding-left: 4rem;
+  }
+  
+  .info_dir {
     display: flex;
-    
-    border: none;
-    outline: none;
-
-    background-repeat: no-repeat;
-
-    width: 150px; /* Ajuste conforme necessário */
-    height: 700px; /* Ajuste conforme necessário */
-    background-image: url('../images/Imagem\ Fundo.png');
-    align-items: center;
     justify-content: center;
-    background-position: center;
+    align-items: center;
+    background-image: url('../images/Imagem\ Fundo.png');
     background-size: cover;
-    position: relative; 
-}
-
-.info_esq h2{
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .info_esq h2 {
     font-family: "Urbanist", sans-serif;
-    font-size: 1.5em;
+    font-size: 2.9rem;
     font-weight: 950;
     color: #333;
-    margin-bottom: 20px;
-}
-
-.info_esq img {
-    width: 60%;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-.card_login {
+    margin-bottom: 2rem;
+  }
+  
+  .info_esq img {
+    width: 100%; /* Garante que a imagem ocupe 100% do espaço disponível */
+    max-width: 60rem; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 1rem 0; /* Margem em cima e embaixo */
+    border-radius: 1rem;
+  }
+  
+  .card_login {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    padding-top: 50px;
-    margin-left: 85px;
-    width: 50%;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    width: 100%;
+    max-width: 40rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.1);
     text-align: left;
-}
-
-
-.card_login h3 {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+  }
+  
+  .card_login h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
     color: #333;
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-form label {
+    gap: 1.2rem;
+  }
+  
+  form label {
     display: flex;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 1.4rem;
     color: #333;
-    margin-bottom: 5px;
+  }
+  
+  form label img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.8rem;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
     width: 100%;
-}
-
-form label img {
-    width: 20px; 
-    height: 20px; 
-    margin-right: 8px;
-    vertical-align: middle; 
-}
-
-form input[type="text"],
-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
     border: 1px solid #ccc;
     background-color: #f0f0f0;
-    font-size: 1em;
-}
-
-input::placeholder {
-    color: #888; 
-    font-family: "Urbanist", sans-serif; 
-    font-style: italic; 
-    font-size: 14px; 
   }
-
-button {
+  
+  input::placeholder {
+    color: #888;
+    font-family: "Urbanist", sans-serif;
+    font-style: italic;
+    font-size: 1.3rem;
+  }
+  
+  button {
     width: 50%;
-    padding: 10px;
-    font-size: 1em;
+    padding: 1rem;
+    font-size: 1.5rem;
     color: white;
     background-color: #e89c51;
-    border: none;
-    border-radius: 15px;
+    border: 0.1rem solid #e89c51;
+    border-radius: 1.5rem;
     cursor: pointer;
-    margin-top: 10px;
-    transition: color 0.5s, background-color 0.5s, border 0.5s;
-}
-
-button:hover {
-    background-color: #ffffff;
+    margin-top: 1rem;
+    transition: 0.5s;
+    align-self: center;
+  }
+  
+  button:hover {
+    background-color: #fff;
     color: #e89c51;
-    border: 0.5px solid #e89c51;
-}
-
-.card_login a {
+  }
+  
+  .card_login a {
     color: #0E4548;
     font-family: "Urbanist", sans-serif;
-    font-size: 0.7em;
+    font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
     text-decoration: none;
-    margin-top: 10px;
-    transition: color 0.3s;
-}
-
-.card_login a:hover {
+    margin-top: 1rem;
+    display: inline-block;
+  }
+  
+  .card_login a:hover {
     color: #d27e3d;
-}
-
-.card_login p {
+  }
+  
+  .card_login p {
     font-family: "Urbanist", sans-serif;
-    font-size: 0.9em;
-    color: #000000;
-    font-weight: bold   ;
-    margin-top: 10px;
-}
-
-.card_login p a {
-    font-family: "Urbanist", sans-serif;    
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .card_login p a {
     color: #0E4548;
+    font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-}
-
-.card_login p a:hover {
+  }
+  
+  .card_login p a:hover {
     color: #d27e3d;
-}
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    body {
+      overflow-x: hidden; /* Impede a rolagem horizontal */
+      overflow-y: auto; /* Garante a rolagem vertical */
+    }
+  
+    .Home {
+      flex-direction: column;
+      height: auto; /* Permite que o conteúdo cresça conforme necessário */
+      min-height: auto;
+    }
+  
+    .info_esq,
+    .info_dir {
+      flex: 1 1 100%;
+      padding: 2rem;
+    }
+  
+    .info_esq {
+      padding-left: 2rem;
+    }
+  
+    .card_login {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 90%;
+    }
+  
+    button {
+      width: 80%;
+    }
+  
+    .info_esq img {
+      width: 100%;
+      max-width: 40rem; /* Aumentei um pouco o max-width para telas pequenas */
+    }
+  }
+  
